@@ -3,3 +3,7 @@
   <img alt="Middy logo" src="https://raw.githubusercontent.com/wingleung/middy-cookie-parser/main/docs/img/middy-logo.svg"/>
   <p><strong>AWS cookie parsing middleware for the middy framework</strong></p>
 </div>
+
+## TODOs
+- harden publish process with [np](https://github.com/sindresorhus/np)
+- add more documentation
