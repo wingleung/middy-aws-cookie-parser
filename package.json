@@ -1,6 +1,6 @@
 {
   "name": "middy-cookie-parser",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A middy middleware to parse cookies\n\n",
   "author": "wingleung",
   "homepage": "",
@@ -26,12 +26,12 @@
   },
   "dependencies": {
     "@middy/core": "^3.1.0",
+    "@types/cookie": "^0.5.1",
     "aws-lambda": "^1.0.7",
     "cookie": "^0.5.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.101",
-    "@types/cookie": "^0.5.1",
     "@types/jest": "^28.1.4",
     "jest": "^28.1.2",
     "ts-jest": "^28.0.5",
