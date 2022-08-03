@@ -4,6 +4,9 @@
   <p><strong>AWS cookie parsing middleware for the middy framework</strong></p>
 </div>
 <p>
+  <a href="https://github.com/wingleung/middy-cookie-parser/actions/workflows/test.yml">
+    <img src="https://github.com/wingleung/middy-cookie-parser/actions/workflows/test.yml/badge.svg" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/wingleung/middy-cookie-parser" style="max-width:100%;">
+  </a>
   <a href="https://www.npmjs.com/package/middy-cookie-parser?activeTab=versions">
     <img src="https://badge.fury.io/js/middy-cookie-parser.svg" alt="npm version" style="max-width:100%;">
   </a>

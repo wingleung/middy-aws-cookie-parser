@@ -1,11 +1,11 @@
-import type middy from '@middy/core'
-import type { MiddlewareObj } from '@middy/core'
 import type {
   APIGatewayEvent,
-  APIGatewayProxyResult,
   APIGatewayProxyEventV2,
+  APIGatewayProxyResult,
   APIGatewayProxyResultV2
 } from 'aws-lambda'
+import type middy from '@middy/core'
+import type { MiddlewareObj } from '@middy/core'
 
 import cookie from 'cookie'
 
@@ -17,7 +17,7 @@ interface APIGatewayProxyEventV2WithCookie extends Omit<APIGatewayProxyEventV2, 
   cookies: string[] | Record<string, string>
 }
 
-interface RequestWithCookie extends middy.Request<APIGatewayEventWithCookie & APIGatewayProxyEventV2WithCookie, APIGatewayProxyResult & APIGatewayProxyResultV2> {}
+type RequestWithCookie = middy.Request<APIGatewayEventWithCookie & APIGatewayProxyEventV2WithCookie, APIGatewayProxyResult & APIGatewayProxyResultV2>
 
 const cookieParserMiddleware = ():MiddlewareObj => {
   const cookieParserMiddlewareBefore = async (request: RequestWithCookie) => {
@@ -44,7 +44,6 @@ const cookieParserMiddleware = ():MiddlewareObj => {
           }),
           {}
         )
-
     }
 
     event.cookies = cookieObject
