@@ -18,7 +18,21 @@
   </a>
 </p>
 
-## TODOs
-- harden publishing process with [np](https://github.com/sindresorhus/np)
-- add more documentation
-- reduce package size (externalize aws-lambda?)
+Usage
+
+```typescript
+import type { APIGatewayEventWithCookie } from 'middy-cookie-parser'
+
+import middy from '@middy/core'
+import CookieParser from 'middy-aws-cookie-parser'
+
+async function baseHandler(event: Partial<APIGatewayEventWithCookie>) {
+  return {
+    statusCode: 200,
+    body: JSON.stringify(event.cookies)
+  }
+}
+
+const handler = middy(baseHandler)
+  .use(CookieParser())
+```

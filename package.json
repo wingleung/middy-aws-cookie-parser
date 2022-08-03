@@ -1,7 +1,7 @@
 {
-  "name": "middy-cookie-parser",
+  "name": "middy-aws-cookie-parser",
   "version": "0.0.1",
-  "description": "A middy middleware to parse cookies\n\n",
+  "description": "A middy middleware to parse cookies on AWS",
   "author": "wingleung",
   "homepage": "",
   "license": "ISC",
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wingleung/middy-cookie-parser.git"
+    "url": "git+https://github.com/wingleung/middy-aws-cookie-parser.git"
   },
   "scripts": {
     "ts:compile": "npx tsc",
