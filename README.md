@@ -18,6 +18,12 @@
   </a>
 </p>
 
+Install
+
+```shell
+npm install middy-aws-cookie-parser --save
+```
+
 Usage
 
 ```typescript
@@ -27,9 +33,14 @@ import middy from '@middy/core'
 import CookieParser from 'middy-aws-cookie-parser'
 
 async function baseHandler(event: Partial<APIGatewayEventWithCookie>) {
+  
+  // event.cookies is available as a parsed cookie jar
+  
   return {
     statusCode: 200,
-    body: JSON.stringify(event.cookies)
+    body: JSON.stringify(
+      event.cookies
+    )
   }
 }
 
